@@ -251,7 +251,8 @@ namespace ai {
 				} else {
 					texturePath = rootPath / ci::fs::path( textureFileName.data );
 				}
-				CI_LOG_I(" [" << texturePath.string() << "] of texture type: " << Assimp::TextureTypeToString((aiTextureType)textureType));
+				CI_LOG_I(" [" << texturePath.string() << "] of texture type: ");
+								 //<< Assimp::TextureTypeToString((aiTextureType)textureType));
 				
 				if( ci::fs::exists( texturePath ) ) {
 					loadSurface( texturePath, mtl, textureType, surfacePool, &matSource );
